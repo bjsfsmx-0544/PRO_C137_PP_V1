@@ -28,17 +28,8 @@ export default class HomeScreen extends Component {
 
   getData = async () => {
     /*write code to fetch data from your flask API.
-     Store the fetched data in the state named data*/
-     
-     const url = "https://3402-121-241-7-122.ngrok.io";
-     axios
-       .get(url)
-       .then((response) => {
-         this.setState({ data: response.data.data });
-       })
-       .catch((error) => {
-         console.log(error.message);
-       });
+     Store the fetched data in the state named "data"*/
+
      
   };
 
@@ -107,7 +98,7 @@ export default class HomeScreen extends Component {
               keyExtractor={this.keyExtractor}
             />
           </View>
-        ) : null}
+        ) : <Text style={styles.headerTitle}>Loading...</Text>}
       </ImageBackground>
     );
   }

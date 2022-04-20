@@ -29,17 +29,8 @@ export default class StarScren extends Component {
   getStarDetails = (name) => {
       /*write code to fetch data from your flask API.
         Make sure to use name argument.
-        Store the fetched data in the state named data*/
+        Store the fetched data in the state named "data"*/
   
-    const url = `https://3402-121-241-7-122.ngrok.io/star?name=${name}`;
-    axios
-      .get(url)
-      .then((response) => {
-        this.setState({ data: response.data.data });
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
   };
 
   render() {
