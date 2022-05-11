@@ -27,8 +27,8 @@ export default class HomeScreen extends Component {
   }
 
   getData = async () => {
-    /*write code to fetch data from your flask API.
-     Store the fetched data in the state named "data"*/
+    /* Escribe el código para recuperar los datos de la API FLask.
+       Almacena los datos recuperados en el estado llamado 'data' */
 
      
   };
@@ -67,7 +67,7 @@ export default class HomeScreen extends Component {
 
   keyExtractor = (item, index) => index.toString();
 
-  /*this function selects a color for the cards on the flatlist*/
+  /* Esta función selecciona un color para las cartas en la FlatList */
   selectColor = (index) => {
     var color = ["#fbffd5", "#ffefff", "#ede5ff", "#eafff4"];
     var num = index % 4;
@@ -87,7 +87,7 @@ export default class HomeScreen extends Component {
           }}
         />
         <View style={styles.headerContainer}>
-          <Text style={styles.headerTitle}>Stars</Text>
+          <Text style={styles.headerTitle}>Estrellas</Text>
         </View>
         {data.length > 0 ? (
           <View style={styles.upperContainer}>
@@ -98,7 +98,7 @@ export default class HomeScreen extends Component {
               keyExtractor={this.keyExtractor}
             />
           </View>
-        ) : <Text style={styles.headerTitle}>Loading...</Text>}
+        ) : <Text style={styles.headerTitle}>Cargando...</Text>}
       </ImageBackground>
     );
   }
